@@ -9,6 +9,7 @@
   <link href="gwdpagedeck_style.css" rel="stylesheet" data-version="14" data-exports-type="gwd-pagedeck">
   <link href="gwdgooglead_style.css" rel="stylesheet" data-version="8" data-exports-type="gwd-google-ad">
   <link href="gwdimage_style.css" rel="stylesheet" data-version="15" data-exports-type="gwd-image">
+  <link href="gwdtaparea_style.css" rel="stylesheet" data-version="7" data-exports-type="gwd-taparea">
   <style type="text/css" id="gwd-lightbox-style">.gwd-lightbox {
     overflow: hidden;
 }</style>
@@ -2482,6 +2483,13 @@ body {
 .gwd-page-k66v {
     background-image: none;
     background-color: rgb(232, 231, 233);
+}
+.gwd-taparea-18wm {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 728px;
+    height: 90px;
 }</style><style type="text/css" data-gwd-secondary-animations="">#page1.start .gwd-gen-jzt8gwdanimation {
     animation: 11.5s linear 0s 1 normal forwards gwd-gen-jzt8gwdanimation_gwd-keyframes_start;
     -webkit-animation: 11.5s linear 0s 1 normal forwards gwd-gen-jzt8gwdanimation_gwd-keyframes_start;
@@ -4700,61 +4708,72 @@ body {
       // GWD Predefined Function
       gwd.actions.timeline.gotoAndPlay('page1', 'start');
     };
+    gwd.auto_Gwd_taparea_1Action = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdGoogleAd.exit('gwd-ad', 'roshn_click_tag', 'https://roshn.sa', false, false, 'page1');
+    };
   </script>
   <script type="text/javascript" gwd-events="registration">
     // Support code for event handling in Google Web Designer
     // This script block is auto-generated. Please do not edit!
     gwd.actions.events.registerEventHandlers = function(event) {
       gwd.actions.events.addHandler('page1', 'event-1', gwd.auto_Page1Event_1, false);
+      gwd.actions.events.addHandler('gwd-taparea_1', 'action', gwd.auto_Gwd_taparea_1Action, false);
       gwd.actions.timeline.captureAnimationEnd(document.body);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler('page1', 'event-1', gwd.auto_Page1Event_1, false);
+      gwd.actions.events.removeHandler('gwd-taparea_1', 'action', gwd.auto_Gwd_taparea_1Action, false);
       gwd.actions.timeline.releaseAnimationEnd(document.body);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
     document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
   </script>
+  <script data-source="gwdtaparea_min.js" data-version="7" data-exports-type="gwd-taparea" src="gwdtaparea_min.js"></script>
 </head>
 
 <body>
   <gwd-google-ad id="gwd-ad">
-    <gwd-metric-configuration></gwd-metric-configuration>
+    <gwd-metric-configuration>
+      <gwd-metric-event source="gwd-taparea_1" event="tapareaexit" metric="" exit="Exit"></gwd-metric-event>
+    </gwd-metric-configuration>
     <gwd-pagedeck class="gwd-page-container" id="pagedeck">
       <gwd-page id="page1" class="gwd-page-wrapper gwd-page-size gwd-lightbox gwd-page-k66v" data-gwd-width="728px" data-gwd-height="90px">
         <div class="gwd-page-content gwd-page-size">
           <div class="gwd-div-1kkv gwd-div-1tof" id="bg2"></div>
           <div class="gwd-div-1kkv gwd-div-1f3w gwd-gen-jzt8gwdanimation" id="bg1"></div>
-          <gwd-image id="heder1" source="heder1.png?1597564742426" scaling="stretch" class="gwd-image-o14z gwd-gen-1a4bgwdanimation"></gwd-image>
-          <gwd-image id="heder1d" source="heder1d.png?1597564742426" scaling="none" class="gwd-image-1alc gwd-gen-6ckjgwdanimation" alignment="right" focalpoint="64 33.5" disablefocalpoint=""></gwd-image>
-          <gwd-image id="heder2" source="heder2.png?1597564742426" scaling="stretch" class="gwd-image-o14z gwd-gen-116fgwdanimation"></gwd-image>
-          <gwd-image id="heder2d" source="heder2d.png?1597564742426" scaling="none" class="gwd-image-1alc gwd-gen-5c5dgwdanimation" alignment="right"></gwd-image>
-          <gwd-image id="heder3" source="heder3.png?1597564742426" scaling="stretch" class="gwd-image-o14z gwd-gen-h1o1gwdanimation"></gwd-image>
-          <gwd-image id="heder3d" source="heder3d.png?1597564742426" scaling="none" class="gwd-image-1alc gwd-gen-15u2gwdanimation" alignment="right"></gwd-image>
-          <gwd-image id="heder4" source="heder4.png?1597564742426" scaling="stretch" class="gwd-image-o14z gwd-gen-88bggwdanimation"></gwd-image>
-          <gwd-image id="heder4d" source="heder4d.png?1597564742426" scaling="none" class="gwd-image-1alc gwd-gen-11b0gwdanimation" alignment="right"></gwd-image>
-          <gwd-image id="text2" source="text2.png?1597564742426" scaling="stretch" class="gwd-image-g350 gwd-gen-b2qggwdanimation"></gwd-image>
-          <gwd-image id="text1" source="text1.png?1597564742426" scaling="stretch" class="gwd-image-1l0a gwd-gen-1w17gwdanimation"></gwd-image>
-          <gwd-image id="roshn-logo" source="roshn-logo.png?1597564742426" scaling="stretch" class="gwd-image-1jp1 gwd-gen-11x2gwdanimation"></gwd-image>
-          <gwd-image id="text3" source="text3.png?1597564742426" scaling="stretch" class="gwd-image-16h3 gwd-gen-y3scgwdanimation"></gwd-image>
-          <gwd-image id="text4" source="text4.png?1597564742426" scaling="stretch" class="gwd-image-1eub gwd-gen-qr31gwdanimation"></gwd-image>
+          <gwd-image id="heder1" source="heder1.png?1597595118838" scaling="stretch" class="gwd-image-o14z gwd-gen-1a4bgwdanimation"></gwd-image>
+          <gwd-image id="heder1d" source="heder1d.png?1597595118838" scaling="none" class="gwd-image-1alc gwd-gen-6ckjgwdanimation" alignment="right" focalpoint="64 33.5" disablefocalpoint=""></gwd-image>
+          <gwd-image id="heder2" source="heder2.png?1597595118838" scaling="stretch" class="gwd-image-o14z gwd-gen-116fgwdanimation"></gwd-image>
+          <gwd-image id="heder2d" source="heder2d.png?1597595118838" scaling="none" class="gwd-image-1alc gwd-gen-5c5dgwdanimation" alignment="right"></gwd-image>
+          <gwd-image id="heder3" source="heder3.png?1597595118838" scaling="stretch" class="gwd-image-o14z gwd-gen-h1o1gwdanimation"></gwd-image>
+          <gwd-image id="heder3d" source="heder3d.png?1597595118838" scaling="none" class="gwd-image-1alc gwd-gen-15u2gwdanimation" alignment="right"></gwd-image>
+          <gwd-image id="heder4" source="heder4.png?1597595118838" scaling="stretch" class="gwd-image-o14z gwd-gen-88bggwdanimation"></gwd-image>
+          <gwd-image id="heder4d" source="heder4d.png?1597595118838" scaling="none" class="gwd-image-1alc gwd-gen-11b0gwdanimation" alignment="right"></gwd-image>
+          <gwd-image id="text2" source="text2.png?1597595118838" scaling="stretch" class="gwd-image-g350 gwd-gen-b2qggwdanimation"></gwd-image>
+          <gwd-image id="text1" source="text1.png?1597595118838" scaling="stretch" class="gwd-image-1l0a gwd-gen-1w17gwdanimation"></gwd-image>
+          <gwd-image id="roshn-logo" source="roshn-logo.png?1597595118838" scaling="stretch" class="gwd-image-1jp1 gwd-gen-11x2gwdanimation"></gwd-image>
+          <gwd-image id="text3" source="text3.png?1597595118838" scaling="stretch" class="gwd-image-16h3 gwd-gen-y3scgwdanimation"></gwd-image>
+          <gwd-image id="text4" source="text4.png?1597595118838" scaling="stretch" class="gwd-image-1eub gwd-gen-qr31gwdanimation"></gwd-image>
           <div class="gwd-div-1kkv gwd-div-1tof gwd-div-2fcb gwd-gen-1q96gwdanimation" id="bg3"></div>
-          <gwd-image id="long-text-0" source="long-text-0.png?1597564742426" scaling="stretch" class="gwd-image-16b3 gwd-gen-1axlgwdanimation"></gwd-image>
-          <gwd-image id="hash-tag" source="hash-tag.png?1597564742426" scaling="stretch" class="gwd-image-d1l2 gwd-gen-3vrhgwdanimation"></gwd-image>
-          <gwd-image id="PIF-text" source="PIF-text.png?1597564742426" scaling="stretch" class="gwd-image-hez3 gwd-gen-1bdigwdanimation"></gwd-image>
+          <gwd-image id="long-text-0" source="long-text-0.png?1597595118838" scaling="stretch" class="gwd-image-16b3 gwd-gen-1axlgwdanimation"></gwd-image>
+          <gwd-image id="hash-tag" source="hash-tag.png?1597595118838" scaling="stretch" class="gwd-image-d1l2 gwd-gen-3vrhgwdanimation"></gwd-image>
+          <gwd-image id="PIF-text" source="PIF-text.png?1597595118838" scaling="stretch" class="gwd-image-hez3 gwd-gen-1bdigwdanimation"></gwd-image>
           <div class="gwd-div-1w8m gwd-gen-5cc4gwdanimation" id="bg-roshn"></div>
-          <gwd-image id="internet" source="internet.png?1597564742426" scaling="stretch" class="gwd-image-1xvr gwd-gen-19zhgwdanimation"></gwd-image>
-          <gwd-image id="gwd-image_1" source="roshn.sa.png?1597564742426" scaling="stretch" class="gwd-image-18do gwd-gen-spuogwdanimation"></gwd-image>
-          <gwd-image id="twitter" source="image.png?1597564742426" scaling="stretch" class="gwd-image-1d4q gwd-gen-14q9gwdanimation"></gwd-image>
-          <gwd-image id="in" source="in.png?1597564742426" scaling="stretch" class="gwd-image-bbgd gwd-gen-1cpsgwdanimation"></gwd-image>
-          <gwd-image id="f" source="f.png?1597564742426" scaling="stretch" class="gwd-image-i8el gwd-gen-1my5gwdanimation"></gwd-image>
-          <gwd-image id="youtube" source="youtube.png?1597564742426" scaling="stretch" class="gwd-image-1z0w gwd-gen-q8ufgwdanimation"></gwd-image>
-          <gwd-image id="ROSHNSA" source="ROSHNSA.png?1597564742426" scaling="stretch" class="gwd-image-m4wf gwd-gen-9xi5gwdanimation"></gwd-image>
-          <gwd-image id="PIF-logo" source="PIF-logo.png?1597564742426" scaling="stretch" class="gwd-image-12c9 gwd-gen-17pogwdanimation"></gwd-image>
+          <gwd-image id="internet" source="internet.png?1597595118838" scaling="stretch" class="gwd-image-1xvr gwd-gen-19zhgwdanimation"></gwd-image>
+          <gwd-image id="gwd-image_1" source="roshn.sa.png?1597595118838" scaling="stretch" class="gwd-image-18do gwd-gen-spuogwdanimation"></gwd-image>
+          <gwd-image id="twitter" source="image.png?1597595118838" scaling="stretch" class="gwd-image-1d4q gwd-gen-14q9gwdanimation"></gwd-image>
+          <gwd-image id="in" source="in.png?1597595118838" scaling="stretch" class="gwd-image-bbgd gwd-gen-1cpsgwdanimation"></gwd-image>
+          <gwd-image id="f" source="f.png?1597595118838" scaling="stretch" class="gwd-image-i8el gwd-gen-1my5gwdanimation"></gwd-image>
+          <gwd-image id="youtube" source="youtube.png?1597595118838" scaling="stretch" class="gwd-image-1z0w gwd-gen-q8ufgwdanimation"></gwd-image>
+          <gwd-image id="ROSHNSA" source="ROSHNSA.png?1597595118838" scaling="stretch" class="gwd-image-m4wf gwd-gen-9xi5gwdanimation"></gwd-image>
+          <gwd-image id="PIF-logo" source="PIF-logo.png?1597595118838" scaling="stretch" class="gwd-image-12c9 gwd-gen-17pogwdanimation"></gwd-image>
           <div class="gwd-animation-event event-1-animation" data-event-name="event-1" data-event-time="23000"></div>
+          <gwd-taparea id="gwd-taparea_1" class="gwd-taparea-18wm"></gwd-taparea>
         </div>
       </gwd-page>
     </gwd-pagedeck>
+    <gwd-exit metric="roshn_click_tag" url="https://roshn.sa"></gwd-exit>
   </gwd-google-ad>
   <script type="text/javascript" id="gwd-init-code">
     (function() {
@@ -4796,4 +4815,5 @@ body {
 
 
 <script data-exports-type="gwd-studio-registration">function StudioExports() {
-}</script><script type="text/gwd-admetadata">{"version":1,"type":"GoogleAd","format":"","template":"Banner 3.0.0","politeload":false,"fullscreen":false,"counters":[],"timers":[],"exits":[],"creativeProperties":{"minWidth":728,"minHeight":90,"maxWidth":728,"maxHeight":90},"components":["gwd-google-ad","gwd-image","gwd-page","gwd-pagedeck"],"responsive":false}</script><script data-exports-type="dclk-quick-preview">studio.Enabler.setRushSimulatedLocalEvents(true);</script></body></html>
+Enabler.exit("roshn_click_tag", "https://roshn.sa");
+}</script><script type="text/gwd-admetadata">{"version":1,"type":"GoogleAd","format":"","template":"Banner 3.0.0","politeload":false,"fullscreen":false,"counters":[],"timers":[],"exits":[{"exitId":"roshn_click_tag","url":"https://roshn.sa"}],"creativeProperties":{"minWidth":728,"minHeight":90,"maxWidth":728,"maxHeight":90},"components":["gwd-google-ad","gwd-image","gwd-page","gwd-pagedeck","gwd-taparea"],"responsive":false}</script><script data-exports-type="dclk-quick-preview">studio.Enabler.setRushSimulatedLocalEvents(true);</script></body></html>
