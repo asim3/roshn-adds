@@ -11,6 +11,7 @@
   <link href="gwdpagedeck_style.css" rel="stylesheet" data-version="14" data-exports-type="gwd-pagedeck">
   <link href="gwdgooglead_style.css" rel="stylesheet" data-version="8" data-exports-type="gwd-google-ad">
   <link href="gwdimage_style.css" rel="stylesheet" data-version="15" data-exports-type="gwd-image">
+  <link href="gwdtaparea_style.css" rel="stylesheet" data-version="7" data-exports-type="gwd-taparea">
   <style type="text/css" id="gwd-lightbox-style">
     .gwd-lightbox {
       overflow: hidden;
@@ -820,6 +821,13 @@
     #page1.gwd-play-animation .gwd-gen-1rhogwdanimation {
       animation: 18.7s linear 0s 1 normal forwards running gwd-gen-1rhogwdanimation_gwd-keyframes;
     }
+    .gwd-taparea-1v94 {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 300px;
+      height: 250px;
+    }
   </style>
   <script data-source="googbase_min.js" data-version="4" data-exports-type="googbase" src="googbase_min.js"></script>
   <script data-source="gwd_webcomponents_v1_min.js" data-version="2" data-exports-type="gwd_webcomponents_v1" src="gwd_webcomponents_v1_min.js"></script>
@@ -834,25 +842,35 @@
       // GWD Predefined Function
       gwd.actions.timeline.gotoAndPlay('page1', 'start');
     };
+    gwd.auto_Gwd_taparea_1Action = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdGoogleAd.exit('gwd-ad', 'roshn-link', 'https://www.roshn.sa/', false, false, 'page1');
+    };
   </script>
   <script type="text/javascript" gwd-events="registration">
     // Support code for event handling in Google Web Designer
     // This script block is auto-generated. Please do not edit!
     gwd.actions.events.registerEventHandlers = function(event) {
       gwd.actions.events.addHandler('page1', 'event-1', gwd.auto_Page1Event_1, false);
+      gwd.actions.events.addHandler('gwd-taparea_1', 'action', gwd.auto_Gwd_taparea_1Action, false);
       gwd.actions.timeline.captureAnimationEnd(document.body);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler('page1', 'event-1', gwd.auto_Page1Event_1, false);
+      gwd.actions.events.removeHandler('gwd-taparea_1', 'action', gwd.auto_Gwd_taparea_1Action, false);
       gwd.actions.timeline.releaseAnimationEnd(document.body);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
     document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
   </script>
+  <script data-source="gwdtaparea_min.js" data-version="7" data-exports-type="gwd-taparea" src="gwdtaparea_min.js"></script>
 </head>
 
 <body>
   <gwd-google-ad id="gwd-ad" polite-load="">
+    <gwd-metric-configuration>
+      <gwd-metric-event source="gwd-taparea_1" event="tapareaexit" metric="" exit="Exit"></gwd-metric-event>
+    </gwd-metric-configuration>
     <gwd-pagedeck class="gwd-page-container" id="pagedeck">
       <gwd-page id="page1" class="gwd-page-wrapper gwd-page-size gwd-lightbox gwd-page-1r2a" data-gwd-width="300px" data-gwd-height="250px" data-gwd-animation-labels="start,0">
         <div class="gwd-page-content gwd-page-size">
@@ -877,9 +895,11 @@
           <div class="gwd-div-r7pr gwd-gen-1rhogwdanimation" id="PIF-line"></div>
           <gwd-image id="PIF-logo" source="assets/PIF-logo.png" scaling="stretch" class="gwd-image-als6 gwd-gen-1kbwgwdanimation"></gwd-image>
           <div class="gwd-animation-event event-1-animation" data-event-name="event-1" data-event-time="20000"></div>
+          <gwd-taparea id="gwd-taparea_1" class="gwd-taparea-1v94"></gwd-taparea>
         </div>
       </gwd-page>
     </gwd-pagedeck>
+    <gwd-exit metric="roshn-link" url="https://www.roshn.sa/"></gwd-exit>
   </gwd-google-ad>
   <script type="text/javascript" id="gwd-init-code">
     (function() {
